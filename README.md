@@ -5,5 +5,11 @@
 
 ## Pages
 
-- [12.1 Three-dimensional coordinate systems](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-1-three-dimensional-coordinate-systems) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.1%20-%203-D%20Coordinate%20Systems.html)
-- [12.2 Vectors](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-2-vectors) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.2%20-%20Vectors.html)
+- [Calc III lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#calc-iii-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/index.html)
+- [12.1 Three-Dimensional Coordinate Systems — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-1-three-dimensional-coordinate-systems-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.1%20Three-Dimensional%20Coordinate%20Systems.html)
+- [12.2 Vectors — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-2-vectors-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.2%20Vectors.html)
+- [12.3 The Dot Product — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-3-the-dot-product-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.3%20The%20Dot%20Product.html)
+- [12.4 The Cross Product — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-4-the-cross-product-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.4%20The%20Cross%20Product.html)
+- [12.5 Equations of Lines and Planes — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-5-equations-of-lines-and-planes-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.5%20Equations%20of%20Lines%20and%20Planes.html)
+- [12.6 Cylinders and Quadric Surfaces — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-6-cylinders-and-quadric-surfaces-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.6%20Cylinders%20and%20Quadric%20Surfaces.html)
+- [13.1–13.2 Vector Functions, Derivatives and Tangents — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#13-1-13-2-vector-functions-derivatives-and-tangents-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/13.1-13.2%20Vector%20Functions%20and%20Derivatives.html)

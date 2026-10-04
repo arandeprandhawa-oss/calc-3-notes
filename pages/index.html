@@ -1,0 +1,134 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calc III lecture notes</title><style>
+:root{
+  --bg:#f6f4ef; --paper:#fffdf9; --ink:#1d2330; --mut:#5d6675; --line:#e2ddd2; --soft:#efebe2;
+  --accent:#2f5fd0; --accent-soft:#e8eefc;
+  --u:#0a8f63; --v:#6a4be0; --p:#e07a00; --w:#d0364f; --b:#1f6fd1; --th:#c2410c; --ax:#8b919c; --g:#0e9aa7;
+  --thm:#2f5fd0; --thm-bg:#eef3fe; --def:#0a8f63; --def-bg:#e9f7f1; --ex:#b45309; --ex-bg:#fdf3e3;
+  --pf:#5d6675; --pf-bg:#f3f1ec; --xp:#7c3aed; --xp-bg:#f4effe; --exam:#be123c; --exam-bg:#fdeef1;
+  --shadow:0 1px 2px rgba(30,30,40,.05),0 8px 24px rgba(30,30,40,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#12151b; --paper:#1a1f28; --ink:#e8eaf0; --mut:#a0a8b6; --line:#2c3440; --soft:#222834;
+    --accent:#86a8ff; --accent-soft:#1f2a44;
+    --u:#3ddc9c; --v:#a892ff; --p:#ffab40; --w:#ff7088; --b:#6cb2ff; --th:#ff9d66; --ax:#7b8494; --g:#4fd4de;
+    --thm:#86a8ff; --thm-bg:#1b2438; --def:#3ddc9c; --def-bg:#15291f; --ex:#ffb454; --ex-bg:#2b2213;
+    --pf:#a0a8b6; --pf-bg:#20252e; --xp:#c0a2ff; --xp-bg:#241c38; --exam:#ff7a94; --exam-bg:#2e1a20;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.25);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.62 "Inter",system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px 80px}
+a{color:var(--accent)}
+.hero{padding:44px 0 18px}
+.eyebrow{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);font-weight:600}
+h1{font:700 clamp(32px,5vw,52px)/1.08 Georgia,"Iowan Old Style","Palatino Linotype",serif;margin:.25em 0 .3em;letter-spacing:-.01em}
+h1 .num{color:var(--accent)}
+.sub{font-size:19px;color:var(--mut);max-width:60ch;margin:0 0 18px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 18px}
+.pill{background:var(--paper);border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-size:13.5px;color:var(--mut)}
+.pill b{color:var(--ink);font-weight:600}
+.key{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 16px;font-size:14.5px;color:var(--mut)}
+.key b{color:var(--ink)}
+.key span{display:block}
+.sw{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:7px;vertical-align:-1px}
+.toc{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  margin:18px -20px 0;padding:10px 20px;border-bottom:1px solid var(--line);display:flex;gap:8px;overflow-x:auto;scrollbar-width:thin}
+.toc a{flex:none;text-decoration:none;font-size:14px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);white-space:nowrap}
+.toc a:hover{border-color:var(--accent);color:var(--accent)}
+section{padding-top:34px}
+h2{font:700 29px/1.2 Georgia,"Iowan Old Style",serif;margin:0 0 4px;display:flex;align-items:baseline;gap:12px;scroll-margin-top:64px}
+h2 .n{font:700 13px/1 "Inter",system-ui,sans-serif;letter-spacing:.1em;color:var(--paper);background:var(--accent);border-radius:6px;padding:5px 8px;transform:translateY(-4px)}
+.lede{color:var(--mut);margin:2px 0 14px;max-width:72ch}
+h3{font-size:17px;margin:20px 0 6px;letter-spacing:.01em}
+.blk{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:22px;align-items:start;margin:14px 0 22px}
+.blk.wide{grid-template-columns:minmax(0,1fr)}
+.notes{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:20px 24px;box-shadow:var(--shadow);min-width:0}
+.notes>:first-child{margin-top:0}.notes>:last-child{margin-bottom:0}
+p{margin:.6em 0}
+.photos{display:flex;flex-direction:column;gap:12px;position:sticky;top:62px}
+.photos figure{margin:0;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.photos img{display:block;width:100%;height:auto;cursor:zoom-in;background:#ddd}
+.photos figcaption{font-size:12.5px;color:var(--mut);padding:6px 10px;line-height:1.35}
+.photos figcaption b{color:var(--ink);font-weight:600}
+.card{border-radius:12px;padding:12px 16px 12px 18px;margin:14px 0;border-left:4px solid var(--c);background:var(--cb)}
+.card>.tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--c);margin-bottom:2px}
+.card>:last-child{margin-bottom:0}
+.thm{--c:var(--thm);--cb:var(--thm-bg)} .def{--c:var(--def);--cb:var(--def-bg)} .ex{--c:var(--ex);--cb:var(--ex-bg)}
+.pf{--c:var(--pf);--cb:var(--pf-bg)} .xp{--c:var(--xp);--cb:var(--xp-bg);font-size:15.5px} .exam{--c:var(--exam);--cb:var(--exam-bg);font-size:15.5px}
+.xp .tag::before{content:"\270E\00a0"}
+.boxed{border:2px solid var(--accent);border-radius:12px;padding:4px 14px;margin:12px auto;background:var(--accent-soft);width:fit-content;max-width:100%}
+.boxed.red{border-color:var(--w);background:color-mix(in srgb,var(--w) 9%,var(--paper))}
+.boxed .cap{display:block;text-align:center;font-size:13px;color:var(--mut);margin:-4px 0 8px}
+.dm{margin:.7em 0;text-align:center;overflow-x:auto;overflow-y:hidden;padding:2px 0}
+.dm svg,.im svg{max-width:none}
+.im{white-space:nowrap}
+.steps .dm{margin:.45em 0}
+figure.fg{margin:16px 0;text-align:center}
+figure.fg svg.fig{max-width:100%;height:auto}
+figure.fg figcaption{font-size:13.5px;color:var(--mut);margin-top:4px;max-width:66ch;margin-inline:auto;text-align:center;line-height:1.45}
+figure.fg figcaption b{color:var(--ink)}
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:10px 22px;align-items:center}.two>*,.three>*{min-width:0}
+.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px 16px;align-items:start}
+.st{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.fl{fill:currentColor;stroke:none}
+text.fl{font-family:"Inter",system-ui,sans-serif}
+.lblbg{fill:var(--paper);opacity:.86}
+.c-ink{color:var(--ink)}.c-mut{color:var(--mut)}.c-ax{color:var(--ax)}.c-u{color:var(--u)}.c-v{color:var(--v)}.c-p{color:var(--p)}
+.c-w{color:var(--w)}.c-b{color:var(--b)}.c-th{color:var(--th)}.c-g{color:var(--g)}.c-acc{color:var(--accent)}
+.t-u{color:var(--u);font-weight:600}.t-v{color:var(--v);font-weight:600}.t-p{color:var(--p);font-weight:600}.t-w{color:var(--w);font-weight:600}.t-b{color:var(--b);font-weight:600}.t-th{color:var(--th);font-weight:600}
+table.t{border-collapse:collapse;margin:12px auto;font-size:15.5px}
+table.t th,table.t td{border-bottom:1px solid var(--line);padding:7px 12px;text-align:left;vertical-align:middle}
+table.t th{font-size:12.5px;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+ol.props{padding-left:1.5em;margin:.5em 0}ol.props li{margin:.3em 0;padding-left:.2em}
+.aside{color:var(--mut);font-size:15px}
+.anat{display:flex;flex-wrap:wrap;justify-content:center;align-items:stretch;gap:10px;margin:14px 0}
+.anat .part{border:2px dashed var(--c);border-radius:12px;padding:4px 12px 8px;text-align:center}
+.anat .part small{display:block;color:var(--c);font-weight:600;font-size:13.5px}
+.anat .op{align-self:center;font-size:20px;color:var(--mut)}
+.widget{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:16px 0;background:var(--soft)}
+.widget h4{margin:0 0 4px;font-size:15px}
+.widget .ctl{display:flex;flex-wrap:wrap;gap:8px 22px;align-items:center;font-size:14.5px;margin-top:6px}
+.widget input[type=range]{width:210px;accent-color:var(--accent)}
+.widget .read{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.widget .read span{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:14.5px;font-variant-numeric:tabular-nums}
+.widget>svg{max-width:100%;height:auto;display:block;margin:0 auto}
+.sheet{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px}
+.sheet .cell{min-width:0}.sheet .cell svg.fig{display:block;margin:0 auto}
+svg.fig{max-width:100%;height:auto}
+.sheet .cell{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.sheet .cell h4{margin:0 0 2px;font-size:13px;letter-spacing:.07em;text-transform:uppercase;color:var(--mut)}
+details{margin:.4em 0}summary{cursor:pointer;font-weight:600;color:var(--xp)}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--line);font-size:13.5px;color:var(--mut)}
+#lb{position:fixed;inset:0;background:rgba(10,12,16,.9);display:none;align-items:center;justify-content:center;z-index:99;cursor:zoom-out;padding:14px}
+#lb.on{display:flex}#lb img{max-width:100%;max-height:100%;border-radius:8px}
+@media (max-width:900px){
+  body{font-size:16px}
+  .blk{grid-template-columns:minmax(0,1fr)}
+  .photos{position:static;flex-direction:row;flex-wrap:wrap}.photos figure{flex:1 1 220px;max-width:420px}
+  .notes{padding:16px;overflow-x:auto}
+  table.t{display:block;overflow-x:auto;max-width:100%}
+  .boxed{overflow-x:auto}
+  h2{font-size:24px}
+}
+@media print{
+  :root{--bg:#fff;--paper:#fff}
+  body{font-size:11.5pt}.toc,#lb,.widget .ctl,.eyebrow a{display:none!important}
+  .wrap{max-width:none;padding:0}.blk{grid-template-columns:minmax(0,1fr) 190px;gap:14px}
+  .notes,.photos figure{box-shadow:none}.photos{position:static}
+  .card,figure,.boxed,.photos figure{break-inside:avoid}h2,h3{break-after:avoid}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:16px;margin-top:18px}
+a.c{display:flex;flex-direction:column;gap:4px;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 20px;text-decoration:none;color:var(--ink);box-shadow:var(--shadow)}
+a.c:hover{border-color:var(--accent)}
+a.c .n{font:700 30px/1 Georgia,serif;color:var(--accent)} a.c .t{font:700 19px/1.25 Georgia,serif} a.c .d{color:var(--mut);font-size:15px} a.c .m{color:var(--mut);font-size:12.5px;margin-top:6px}
+</style></head><body><div class="wrap"><header class="hero"><div class="eyebrow">MATH 2321 · Calculus III · Fall 2026</div>
+<h1>Lecture notes, <span class="num">12.1 – 13.2</span></h1>
+<p class="sub">One page per lecture PDF. Every board line typed out, every sketch redrawn, and the original photos alongside.</p></header>
+<div class="grid"><a class="c" href="12.1%20Three-Dimensional%20Coordinate%20Systems.html"><span class="n">12.1</span><span class="t">Three-Dimensional Coordinate Systems</span><span class="d">Points in space, curves vs surfaces, distance, spheres</span><span class="m">Lecture Sept 8, 2026 · 24 pages · 27 original images</span></a><a class="c" href="12.2%20Vectors.html"><span class="n">12.2</span><span class="t">Vectors</span><span class="d">Addition, scalars, components, length, i j k, unit vectors, forces</span><span class="m">Lecture Sept 11, 2026 · 9 pages · 21 original images</span></a><a class="c" href="12.3%20The%20Dot%20Product.html"><span class="n">12.3</span><span class="t">The Dot Product</span><span class="d">Angle, orthogonality, direction cosines, projections, work</span><span class="m">Lecture Sept 16, 2026 · 12 pages · 20 original images</span></a><a class="c" href="12.4%20The%20Cross%20Product.html"><span class="n">12.4</span><span class="t">The Cross Product</span><span class="d">Derivation, determinant, right-hand rule, area, properties</span><span class="m">Lecture Sept 18, 2026 · 10 pages · 18 original images</span></a><a class="c" href="12.5%20Equations%20of%20Lines%20and%20Planes.html"><span class="n">12.5</span><span class="t">Equations of Lines and Planes</span><span class="d">Triple product, torque, lines, planes, line meets plane</span><span class="m">Lecture Sept 23, 2026 · 9 pages · 21 original images</span></a><a class="c" href="12.6%20Cylinders%20and%20Quadric%20Surfaces.html"><span class="n">12.6</span><span class="t">Cylinders and Quadric Surfaces</span><span class="d">Angle between planes, point-to-plane distance, conics, cylinders, quadrics</span><span class="m">Lecture Sept 25, 2026 · 17 pages · 31 original images</span></a><a class="c" href="13.1-13.2%20Vector%20Functions%20and%20Derivatives.html"><span class="n">13.1–13.2</span><span class="t">Vector Functions, Derivatives and Tangents</span><span class="d">Space curves, limits, curve of intersection, r′(t), tangent lines, rules</span><span class="m">Lecture Oct 2, 2026 · 17 pages · 28 original images</span></a></div>
+<footer>Each page is a single self-contained file: it works offline, prints cleanly, and follows your device’s light or dark setting.</footer></div></body></html>
