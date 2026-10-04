@@ -1,0 +1,15 @@
+{
+    "title":  "Calc 3 notes",
+    "layout":  "tabs",
+    "url":  "https://arandeprandhawa-oss.github.io/calc-3-notes/",
+    "tabs":  [
+                 {
+                     "label":  "12.1 Three-dimensional coordinate systems",
+                     "file":  "pages/12.1 - 3-D Coordinate Systems.html"
+                 },
+                 {
+                     "label":  "12.2 Vectors",
+                     "file":  "pages/12.2 - Vectors.html"
+                 }
+             ]
+}

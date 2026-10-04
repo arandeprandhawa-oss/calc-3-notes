@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Calc 3 notes</title>
+<style>
+:root{--bg:#f6f7f9;--bar:#fff;--text:#1d2127;--muted:#5f6b7a;--line:#e3e6eb;--accent:#2f6fed;--accent-bg:#e8f0fe}
+@media (prefers-color-scheme:dark){:root{--bg:#111418;--bar:#181c21;--text:#e8ebef;--muted:#9aa4b1;--line:#2a3038;--accent:#7aa7ff;--accent-bg:#1e2a40}}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%}
+body{display:flex;flex-direction:column;height:100vh;height:100dvh;background:var(--bg);color:var(--text);font:15px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{display:flex;align-items:center;gap:16px;padding:0 16px;background:var(--bar);border-bottom:1px solid var(--line);min-height:52px}
+h1{font-size:16px;font-weight:650;margin:0;white-space:nowrap}
+nav{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none;flex:1;padding:8px 0}
+nav::-webkit-scrollbar{display:none}
+nav button{flex:none;border:0;background:none;color:var(--muted);font:inherit;padding:7px 12px;border-radius:8px;cursor:pointer;white-space:nowrap}
+nav button:hover{color:var(--text);background:var(--line)}
+nav button[aria-selected="true"]{color:var(--accent);background:var(--accent-bg);font-weight:600}
+nav button:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+a.open{color:var(--muted);text-decoration:none;font-size:13px;white-space:nowrap}
+a.open:hover{color:var(--text)}
+iframe{flex:1;width:100%;border:0;background:#fff}
+@media (max-width:640px){header{flex-wrap:wrap;gap:0;padding-top:10px}h1{flex:1}nav{order:3;flex-basis:100%}}
+</style>
+</head>
+<body>
+<header>
+<h1>Calc 3 notes</h1>
+<nav role="tablist" id="tabs" aria-label="Pages"></nav>
+<a class="open" id="open" target="_blank" rel="noopener">Open &#8599;</a>
+</header>
+<iframe id="frame" title="Page content"></iframe>
+<script>
+const SITE = "Calc 3 notes";
+const tabs = [{"label":"12.1 Three-dimensional coordinate systems","slug":"12-1-three-dimensional-coordinate-systems","file":"pages/12.1%20-%203-D%20Coordinate%20Systems.html"},{"label":"12.2 Vectors","slug":"12-2-vectors","file":"pages/12.2%20-%20Vectors.html"}];
+const nav = document.getElementById('tabs');
+const frame = document.getElementById('frame');
+const openLink = document.getElementById('open');
+let current = null;
+tabs.forEach(t => {
+  const b = document.createElement('button');
+  b.setAttribute('role', 'tab');
+  b.textContent = t.label;
+  b.onclick = () => { location.hash = t.slug; };
+  t.el = b;
+  nav.appendChild(b);
+});
+nav.addEventListener('keydown', e => {
+  if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+  const i = tabs.findIndex(t => t.el === document.activeElement);
+  if (i < 0) return;
+  const n = tabs[(i + (e.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length];
+  n.el.focus();
+  location.hash = n.slug;
+});
+function show() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  const t = tabs.find(x => x.slug === h) || tabs[0];
+  if (t !== current) {
+    const url = new URL(t.file, location.href).href;
+    if (current) frame.contentWindow.location.replace(url); else frame.src = url;
+    current = t;
+  }
+  openLink.href = t.file;
+  tabs.forEach(x => { x.el.setAttribute('aria-selected', x === t); x.el.tabIndex = x === t ? 0 : -1; });
+  t.el.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  document.title = t.label + ' · ' + SITE;
+}
+addEventListener('hashchange', show);
+show();
+</script>
+</body>
+</html>
