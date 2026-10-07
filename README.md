@@ -6,6 +6,8 @@
 ## Pages
 
 - [Calc III lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#calc-iii-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/index.html)
+- [MATH 2321 Course Outline](https://arandeprandhawa-oss.github.io/calc-3-notes/#math-2321-course-outline) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/2321%20Course%20Outline.html)
+- [MATH 2321 Exercises](https://arandeprandhawa-oss.github.io/calc-3-notes/#math-2321-exercises) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/2321%20Lecture%20Schedule%20and%20Exercises.html)
 - [12.1 Three-Dimensional Coordinate Systems — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-1-three-dimensional-coordinate-systems-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.1%20Three-Dimensional%20Coordinate%20Systems.html)
 - [12.2 Vectors — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-2-vectors-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.2%20Vectors.html)
 - [12.3 The Dot Product — MATH 2321 lecture notes](https://arandeprandhawa-oss.github.io/calc-3-notes/#12-3-the-dot-product-math-2321-lecture-notes) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/12.3%20The%20Dot%20Product.html)

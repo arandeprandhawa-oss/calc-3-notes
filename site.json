@@ -2,11 +2,20 @@
     "title":  "Calc 3 notes",
     "layout":  "tabs",
     "zoom":  80,
+    "index":  "pages/index.html",
     "url":  "https://arandeprandhawa-oss.github.io/calc-3-notes/",
     "tabs":  [
                  {
                      "label":  "Calc III lecture notes",
                      "file":  "pages/index.html"
+                 },
+                 {
+                     "label":  "MATH 2321 Course Outline",
+                     "file":  "pages/2321 Course Outline.html"
+                 },
+                 {
+                     "label":  "MATH 2321 Exercises",
+                     "file":  "pages/2321 Lecture Schedule and Exercises.html"
                  },
                  {
                      "label":  "12.1 Three-Dimensional Coordinate Systems — MATH 2321 lecture notes",
