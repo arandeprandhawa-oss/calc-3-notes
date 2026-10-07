@@ -44,6 +44,10 @@
                  {
                      "label":  "13.1–13.2 Vector Functions, Derivatives and Tangents — MATH 2321 lecture notes",
                      "file":  "pages/13.1-13.2 Vector Functions and Derivatives.html"
+                 },
+                 {
+                     "label":  "13.2–13.3 Integrals, Arc Length and Curvature",
+                     "file":  "pages/13.2-13.3 Arc Length and Curvature.html"
                  }
              ]
 }
