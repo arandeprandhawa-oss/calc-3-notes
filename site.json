@@ -48,6 +48,10 @@
                  {
                      "label":  "13.2–13.3 Integrals, Arc Length and Curvature",
                      "file":  "pages/13.2-13.3 Arc Length and Curvature.html"
+                 },
+                 {
+                     "label":  "13.3–13.4 Curvature, TNB Frame, Velocity and Acceleration",
+                     "file":  "pages/13.3-13.4 Curvature and Motion in Space.html"
                  }
              ]
 }
