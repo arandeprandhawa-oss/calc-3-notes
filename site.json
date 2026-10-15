@@ -1,57 +1,61 @@
 {
-    "title":  "Calc 3 notes",
-    "layout":  "tabs",
-    "zoom":  80,
-    "index":  "pages/index.html",
-    "url":  "https://arandeprandhawa-oss.github.io/calc-3-notes/",
-    "tabs":  [
-                 {
-                     "label":  "Calc III lecture notes",
-                     "file":  "pages/index.html"
-                 },
-                 {
-                     "label":  "MATH 2321 Exercises",
-                     "file":  "pages/2321 Lecture Schedule and Exercises.html"
-                 },
-                 {
-                     "label":  "MATH 2321 Course Outline",
-                     "file":  "pages/2321 Course Outline.html"
-                 },
-                 {
-                     "label":  "12.1 Three-Dimensional Coordinate Systems — MATH 2321 lecture notes",
-                     "file":  "pages/12.1 Three-Dimensional Coordinate Systems.html"
-                 },
-                 {
-                     "label":  "12.2 Vectors — MATH 2321 lecture notes",
-                     "file":  "pages/12.2 Vectors.html"
-                 },
-                 {
-                     "label":  "12.3 The Dot Product — MATH 2321 lecture notes",
-                     "file":  "pages/12.3 The Dot Product.html"
-                 },
-                 {
-                     "label":  "12.4 The Cross Product — MATH 2321 lecture notes",
-                     "file":  "pages/12.4 The Cross Product.html"
-                 },
-                 {
-                     "label":  "12.5 Equations of Lines and Planes — MATH 2321 lecture notes",
-                     "file":  "pages/12.5 Equations of Lines and Planes.html"
-                 },
-                 {
-                     "label":  "12.6 Cylinders and Quadric Surfaces — MATH 2321 lecture notes",
-                     "file":  "pages/12.6 Cylinders and Quadric Surfaces.html"
-                 },
-                 {
-                     "label":  "13.1–13.2 Vector Functions, Derivatives and Tangents — MATH 2321 lecture notes",
-                     "file":  "pages/13.1-13.2 Vector Functions and Derivatives.html"
-                 },
-                 {
-                     "label":  "13.2–13.3 Integrals, Arc Length and Curvature",
-                     "file":  "pages/13.2-13.3 Arc Length and Curvature.html"
-                 },
-                 {
-                     "label":  "13.3–13.4 Curvature, TNB Frame, Velocity and Acceleration",
-                     "file":  "pages/13.3-13.4 Curvature and Motion in Space.html"
-                 }
-             ]
+    "title": "Calc 3 notes",
+    "layout": "tabs",
+    "zoom": 80,
+    "index": "pages/index.html",
+    "url": "https://arandeprandhawa-oss.github.io/calc-3-notes/",
+    "tabs": [
+        {
+            "label": "Calc III lecture notes",
+            "file": "pages/index.html"
+        },
+        {
+            "label": "MATH 2321 Exercises",
+            "file": "pages/2321 Lecture Schedule and Exercises.html"
+        },
+        {
+            "label": "MATH 2321 Course Outline",
+            "file": "pages/2321 Course Outline.html"
+        },
+        {
+            "label": "12.1 Three-Dimensional Coordinate Systems — MATH 2321 lecture notes",
+            "file": "pages/12.1 Three-Dimensional Coordinate Systems.html"
+        },
+        {
+            "label": "12.2 Vectors — MATH 2321 lecture notes",
+            "file": "pages/12.2 Vectors.html"
+        },
+        {
+            "label": "12.3 The Dot Product — MATH 2321 lecture notes",
+            "file": "pages/12.3 The Dot Product.html"
+        },
+        {
+            "label": "12.4 The Cross Product — MATH 2321 lecture notes",
+            "file": "pages/12.4 The Cross Product.html"
+        },
+        {
+            "label": "12.5 Equations of Lines and Planes — MATH 2321 lecture notes",
+            "file": "pages/12.5 Equations of Lines and Planes.html"
+        },
+        {
+            "label": "12.6 Cylinders and Quadric Surfaces — MATH 2321 lecture notes",
+            "file": "pages/12.6 Cylinders and Quadric Surfaces.html"
+        },
+        {
+            "label": "13.1–13.2 Vector Functions, Derivatives and Tangents — MATH 2321 lecture notes",
+            "file": "pages/13.1-13.2 Vector Functions and Derivatives.html"
+        },
+        {
+            "label": "13.2–13.3 Integrals, Arc Length and Curvature",
+            "file": "pages/13.2-13.3 Arc Length and Curvature.html"
+        },
+        {
+            "label": "13.3–13.4 Curvature, TNB Frame, Velocity and Acceleration",
+            "file": "pages/13.3-13.4 Curvature and Motion in Space.html"
+        },
+        {
+            "label": "13.4–14.1 Acceleration and Functions",
+            "file": "pages/13.4-14.1 Acceleration Components and Functions of Several Variables.html"
+        }
+    ]
 }

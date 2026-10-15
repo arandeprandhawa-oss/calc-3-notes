@@ -46,7 +46,7 @@ iframe{flex:1;width:100%;border:0;background:#fff}
 <iframe id="frame" title="Page content"></iframe>
 <script>
 const SITE = "Calc 3 notes";
-const tabs = [{"label":"Calc III lecture notes","slug":"calc-iii-lecture-notes","file":"pages/index.html"},{"label":"MATH 2321 Exercises","slug":"math-2321-exercises","file":"pages/2321%20Lecture%20Schedule%20and%20Exercises.html"},{"label":"MATH 2321 Course Outline","slug":"math-2321-course-outline","file":"pages/2321%20Course%20Outline.html"},{"label":"12.1 Three-Dimensional Coordinate Systems — MATH 2321 lecture notes","slug":"12-1-three-dimensional-coordinate-systems-math-2321-lecture-notes","file":"pages/12.1%20Three-Dimensional%20Coordinate%20Systems.html"},{"label":"12.2 Vectors — MATH 2321 lecture notes","slug":"12-2-vectors-math-2321-lecture-notes","file":"pages/12.2%20Vectors.html"},{"label":"12.3 The Dot Product — MATH 2321 lecture notes","slug":"12-3-the-dot-product-math-2321-lecture-notes","file":"pages/12.3%20The%20Dot%20Product.html"},{"label":"12.4 The Cross Product — MATH 2321 lecture notes","slug":"12-4-the-cross-product-math-2321-lecture-notes","file":"pages/12.4%20The%20Cross%20Product.html"},{"label":"12.5 Equations of Lines and Planes — MATH 2321 lecture notes","slug":"12-5-equations-of-lines-and-planes-math-2321-lecture-notes","file":"pages/12.5%20Equations%20of%20Lines%20and%20Planes.html"},{"label":"12.6 Cylinders and Quadric Surfaces — MATH 2321 lecture notes","slug":"12-6-cylinders-and-quadric-surfaces-math-2321-lecture-notes","file":"pages/12.6%20Cylinders%20and%20Quadric%20Surfaces.html"},{"label":"13.1–13.2 Vector Functions, Derivatives and Tangents — MATH 2321 lecture notes","slug":"13-1-13-2-vector-functions-derivatives-and-tangents-math-2321-lecture-notes","file":"pages/13.1-13.2%20Vector%20Functions%20and%20Derivatives.html"},{"label":"13.2–13.3 Integrals, Arc Length and Curvature","slug":"13-2-13-3-integrals-arc-length-and-curvature","file":"pages/13.2-13.3%20Arc%20Length%20and%20Curvature.html"},{"label":"13.3–13.4 Curvature, TNB Frame, Velocity and Acceleration","slug":"13-3-13-4-curvature-tnb-frame-velocity-and-acceleration","file":"pages/13.3-13.4%20Curvature%20and%20Motion%20in%20Space.html"}];
+const tabs = [{"label":"Calc III lecture notes","slug":"calc-iii-lecture-notes","file":"pages/index.html","v":"2fe7d4c5"},{"label":"MATH 2321 Exercises","slug":"math-2321-exercises","file":"pages/2321%20Lecture%20Schedule%20and%20Exercises.html","v":"fbe986ca"},{"label":"MATH 2321 Course Outline","slug":"math-2321-course-outline","file":"pages/2321%20Course%20Outline.html","v":"38cd6e6f"},{"label":"12.1 Three-Dimensional Coordinate Systems — MATH 2321 lecture notes","slug":"12-1-three-dimensional-coordinate-systems-math-2321-lecture-notes","file":"pages/12.1%20Three-Dimensional%20Coordinate%20Systems.html","v":"d69c1850"},{"label":"12.2 Vectors — MATH 2321 lecture notes","slug":"12-2-vectors-math-2321-lecture-notes","file":"pages/12.2%20Vectors.html","v":"7a86999c"},{"label":"12.3 The Dot Product — MATH 2321 lecture notes","slug":"12-3-the-dot-product-math-2321-lecture-notes","file":"pages/12.3%20The%20Dot%20Product.html","v":"1434e350"},{"label":"12.4 The Cross Product — MATH 2321 lecture notes","slug":"12-4-the-cross-product-math-2321-lecture-notes","file":"pages/12.4%20The%20Cross%20Product.html","v":"8b085ee9"},{"label":"12.5 Equations of Lines and Planes — MATH 2321 lecture notes","slug":"12-5-equations-of-lines-and-planes-math-2321-lecture-notes","file":"pages/12.5%20Equations%20of%20Lines%20and%20Planes.html","v":"aa67af16"},{"label":"12.6 Cylinders and Quadric Surfaces — MATH 2321 lecture notes","slug":"12-6-cylinders-and-quadric-surfaces-math-2321-lecture-notes","file":"pages/12.6%20Cylinders%20and%20Quadric%20Surfaces.html","v":"0fec9953"},{"label":"13.1–13.2 Vector Functions, Derivatives and Tangents — MATH 2321 lecture notes","slug":"13-1-13-2-vector-functions-derivatives-and-tangents-math-2321-lecture-notes","file":"pages/13.1-13.2%20Vector%20Functions%20and%20Derivatives.html","v":"bc3459ad"},{"label":"13.2–13.3 Integrals, Arc Length and Curvature","slug":"13-2-13-3-integrals-arc-length-and-curvature","file":"pages/13.2-13.3%20Arc%20Length%20and%20Curvature.html","v":"98aa70ee"},{"label":"13.3–13.4 Curvature, TNB Frame, Velocity and Acceleration","slug":"13-3-13-4-curvature-tnb-frame-velocity-and-acceleration","file":"pages/13.3-13.4%20Curvature%20and%20Motion%20in%20Space.html","v":"cf93ea9a"},{"label":"13.4–14.1 Acceleration and Functions","slug":"13-4-14-1-acceleration-and-functions","file":"pages/13.4-14.1%20Acceleration%20Components%20and%20Functions%20of%20Several%20Variables.html","v":"18a75981"}];
 const nav = document.getElementById('tabs');
 const frame = document.getElementById('frame');
 const openLink = document.getElementById('open');
@@ -68,19 +68,45 @@ nav.addEventListener('keydown', e => {
   n.el.focus();
   location.hash = n.slug;
 });
+tabs.forEach(t => { t.path = decodeURIComponent(new URL(t.file, location.href).pathname); });
+function mark(t) {
+  openLink.href = t.file;
+  tabs.forEach(x => { x.el.setAttribute('aria-selected', x === t); x.el.tabIndex = x === t ? 0 : -1; });
+  t.el.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+  document.title = t.label + ' · ' + SITE;
+}
 function show() {
   const h = decodeURIComponent(location.hash.slice(1));
   const t = tabs.find(x => x.slug === h) || tabs[0];
   if (t !== current) {
-    const url = new URL(t.file, location.href).href;
+    // ?v= changes whenever the page changes, so the browser never shows an old copy
+    const url = new URL(t.file + (t.v ? '?v=' + t.v : ''), location.href).href;
     if (current) frame.contentWindow.location.replace(url); else frame.src = url;
     current = t;
   }
-  openLink.href = t.file;
-  tabs.forEach(x => { x.el.setAttribute('aria-selected', x === t); x.el.tabIndex = x === t ? 0 : -1; });
-  t.el.scrollIntoView({ block: 'nearest', inline: 'nearest' });
-  document.title = t.label + ' \u00b7 ' + SITE;
+  mark(t);
 }
+// A link inside a page that leads to another tab (an index card, "All lectures")
+// switches tabs instead, so the tab bar follows and the page is always the newest copy.
+frame.addEventListener('load', () => {
+  let doc, here;
+  try { doc = frame.contentDocument; here = decodeURIComponent(frame.contentWindow.location.pathname); } catch (e) { return; }
+  if (!doc) return;
+  const now = tabs.find(x => x.path === here);
+  if (now && now !== current) { current = now; history.replaceState(null, '', '#' + now.slug); mark(now); }
+  doc.addEventListener('click', e => {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const a = e.target && e.target.closest ? e.target.closest('a[href]') : null;
+    if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download')) return;
+    let u;
+    try { u = new URL(a.getAttribute('href'), doc.baseURI); } catch (err) { return; }
+    if (u.origin !== location.origin) return;
+    const hit = tabs.find(x => x.path === decodeURIComponent(u.pathname));
+    if (!hit || hit === current) return;
+    e.preventDefault();
+    location.hash = hit.slug;
+  });
+});
 // Slider under the tabs: appears only when the tabs don't all fit
 function syncSlide() {
   const max = nav.scrollWidth - nav.clientWidth;
