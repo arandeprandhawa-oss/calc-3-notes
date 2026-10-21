@@ -56,6 +56,10 @@
         {
             "label": "13.4–14.1 Acceleration and Functions",
             "file": "pages/13.4-14.1 Acceleration Components and Functions of Several Variables.html"
+        },
+        {
+            "label": "14.1–14.2 Level Curves and Limits",
+            "file": "pages/14.1-14.2 Level Curves and Limits.html"
         }
     ]
 }
