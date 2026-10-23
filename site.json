@@ -60,6 +60,10 @@
         {
             "label": "14.1–14.2 Level Curves and Limits",
             "file": "pages/14.1-14.2 Level Curves and Limits.html"
+        },
+        {
+            "label": "14.2–14.4 Partial Derivatives, Tangent Planes",
+            "file": "pages/14.2-14.4 Partial Derivatives and Tangent Planes.html"
         }
     ]
 }
