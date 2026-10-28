@@ -64,6 +64,10 @@
         {
             "label": "14.2–14.4 Partial Derivatives, Tangent Planes",
             "file": "pages/14.2-14.4 Partial Derivatives and Tangent Planes.html"
+        },
+        {
+            "label": "14.4 Linearization and Differentials",
+            "file": "pages/14.4 Linear Approximations and Differentials.html"
         }
     ]
 }
