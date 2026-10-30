@@ -68,6 +68,10 @@
         {
             "label": "14.4 Linearization and Differentials",
             "file": "pages/14.4 Linear Approximations and Differentials.html"
+        },
+        {
+            "label": "14.5 The Chain Rule",
+            "file": "pages/14.5 The Chain Rule.html"
         }
     ]
 }
