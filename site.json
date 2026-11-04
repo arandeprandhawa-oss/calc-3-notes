@@ -72,6 +72,10 @@
         {
             "label": "14.5 The Chain Rule",
             "file": "pages/14.5 The Chain Rule.html"
+        },
+        {
+            "label": "14.6 Directional Derivatives, Gradient",
+            "file": "pages/14.6 Directional Derivatives and the Gradient.html"
         }
     ]
 }
