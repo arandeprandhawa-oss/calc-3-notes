@@ -23,3 +23,4 @@
 - [14.4 Linearization and Differentials](https://arandeprandhawa-oss.github.io/calc-3-notes/#14-4-linearization-and-differentials) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/14.4%20Linear%20Approximations%20and%20Differentials.html)
 - [14.5 The Chain Rule](https://arandeprandhawa-oss.github.io/calc-3-notes/#14-5-the-chain-rule) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/14.5%20The%20Chain%20Rule.html)
 - [14.6 Directional Derivatives, Gradient](https://arandeprandhawa-oss.github.io/calc-3-notes/#14-6-directional-derivatives-gradient) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/14.6%20Directional%20Derivatives%20and%20the%20Gradient.html)
+- [14.7 Max and Min Values](https://arandeprandhawa-oss.github.io/calc-3-notes/#14-7-max-and-min-values) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/14.7%20Maximum%20and%20Minimum%20Values.html)

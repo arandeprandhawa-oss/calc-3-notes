@@ -76,6 +76,10 @@
         {
             "label": "14.6 Directional Derivatives, Gradient",
             "file": "pages/14.6 Directional Derivatives and the Gradient.html"
+        },
+        {
+            "label": "14.7 Max and Min Values",
+            "file": "pages/14.7 Maximum and Minimum Values.html"
         }
     ]
 }
