@@ -141,6 +141,56 @@ button.fb[aria-pressed=true]{border-color:var(--accent);color:var(--accent);back
 .widget .read b{font-weight:600}
 .steps.c-w{color:var(--w)}
 @media print{.figbar{display:none!important}}
+</style><style id="nw-added">
+/* ---- added: interactives, self-check, page navigation ---- */
+.nw-card{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:18px 22px;box-shadow:var(--shadow);margin:14px 0 22px;min-width:0}
+.nw-tag{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--xp);margin-bottom:4px}
+.nw{border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin:8px 0 0;background:var(--soft)}
+.nw h4{margin:0 0 4px;font-size:16px}
+.nw-note{color:var(--mut);font-size:15px;margin:2px 0 10px;max-width:78ch}
+.nw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:12px;align-items:start}
+.nw-pt{font-size:12.5px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--mut);margin:0 0 4px}
+.nw-svg{display:block;width:100%;max-width:560px;height:auto;margin:0 auto;background:var(--paper);border:1px solid var(--line);border-radius:12px;user-select:none;-webkit-user-select:none}
+.nw-rot{cursor:grab;touch-action:none}.nw-rot:active{cursor:grabbing}
+.nw-st{fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round}
+.nw-fl{fill:currentColor;stroke:none}
+.nw-tx{fill:currentColor;stroke:var(--paper);stroke-width:3.5px;paint-order:stroke;font-family:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+.nw-hd{fill:currentColor;fill-opacity:.18;stroke:currentColor;stroke-width:1.5;cursor:grab;touch-action:none}
+.k-ink{color:var(--ink)}.k-mut{color:var(--mut)}.k-ax{color:var(--ax)}.k-u{color:var(--u)}.k-v{color:var(--v)}.k-p{color:var(--p)}.k-w{color:var(--w)}.k-b{color:var(--b)}.k-th{color:var(--th)}.k-g{color:var(--g)}.k-acc{color:var(--accent)}
+.nw-ctl{display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center;font-size:14.5px;margin-top:10px}
+.nw-ctl label{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.nw-ctl input[type=range]{width:170px;accent-color:var(--accent)}
+.nw-ctl output{display:inline-block;min-width:2.6em;font-weight:700;font-variant-numeric:tabular-nums}
+.nw-tabs{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.nw-tabs button,.nw-btn{font:inherit;font-size:14px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+.nw-tabs button:hover,.nw-btn:hover{border-color:var(--accent)}
+.nw-tabs button.on{background:var(--accent);border-color:var(--accent);color:var(--paper);font-weight:600}
+.nw-read{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.nw-read span{background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:4px 10px;font-size:14.5px;font-variant-numeric:tabular-nums}
+.nw-read span.hot{border-color:var(--p);color:var(--p);font-weight:600}
+.nw-say{margin:10px 0 0;font-size:15.5px;border-left:4px solid var(--xp);background:var(--xp-bg);border-radius:10px;padding:8px 14px}
+.mh{font-family:Georgia,"Times New Roman",serif;font-size:1.04em;white-space:nowrap}
+.mh i{font-style:italic}
+.sq-list{display:grid;gap:10px;margin:12px 0 0;padding:0;list-style:none;counter-reset:sq}
+.sq-list>li{counter-increment:sq;border:1px solid var(--line);border-radius:12px;background:var(--soft);padding:12px 16px}
+.sq-q{margin:0;font-weight:600}
+.sq-q::before{content:"Q" counter(sq) "\00a0\00a0";color:var(--xp);font-weight:700}
+.sq-list details{margin:8px 0 0}
+.sq-list summary{cursor:pointer;font-weight:600;color:var(--xp);font-size:14.5px}
+.sq-list details[open] summary{margin-bottom:6px}
+.sq-a{border-left:4px solid var(--def);background:var(--def-bg);border-radius:10px;padding:8px 14px;font-size:15.5px}
+.sq-a p{margin:.35em 0}
+.sq-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.sq-topic{display:inline-block;font-size:11.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);margin-bottom:2px}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:40px}
+.pn a{display:block;text-decoration:none;color:var(--ink);background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow)}
+.pn a:hover{border-color:var(--accent)}
+.pn a small{display:block;font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--mut)}
+.pn a b{font:700 17px/1.3 Georgia,serif}
+.pn a.nx{text-align:right;grid-column:2}
+.toc a.cur{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+@media (max-width:600px){.nw-card{padding:14px}.nw-ctl input[type=range]{width:130px}.pn{grid-template-columns:1fr}.pn a.nx{grid-column:1}}
+@media print{.nw-ctl,.nw-tabs,.pn,.sq-bar{display:none!important}.sq-list details>*{display:block}.nw-card,.sq-list>li{break-inside:avoid;box-shadow:none}}
 </style><style id="site-zoom">@media (min-width:900px){html{zoom:0.8}}</style></head><body><div class="wrap">
 <header class="hero">
 <div class="eyebrow">MATH 2321 · Calculus III · Stewart 13.3 (continued) and 13.4 · <a href="index.html">← all lectures</a></div>
@@ -161,7 +211,7 @@ button.fb[aria-pressed=true]{border-color:var(--accent);color:var(--accent);back
 
 <nav class="toc">
 <a href="#s1">1 Curvature</a><a href="#s2">2 N and B</a><a href="#s3">3 Example: T, N, B, κ</a><a href="#s4">4 Normal and osculating planes</a><a href="#s5">5 Osculating circle</a><a href="#s6">6 Summary of formulas</a><a href="#s7">7 Example: osculating circle</a><a href="#s8">8 Velocity and acceleration</a><a href="#s9">9 Example: a → v → r</a><a href="#s10">10 Projectile</a><a href="#s11">At a glance</a>
-</nav>
+<a href="#selfcheck">? Self-check</a></nav>
 
 <!-- ============================ 1 ============================ -->
 <section>
@@ -710,6 +760,16 @@ button.fb[aria-pressed=true]{border-color:var(--accent);color:var(--accent);back
 </div>
 </section>
 
+<section><h2 id="selfcheck"><span class="n">?</span>Questions to ask yourself</h2><p class="lede">Added for review; not from the board. Cover the answer, work it out on paper, then open it. No calculator: answers are left exact.</p><div class="nw-card"><span class="nw-tag">✎ Self-check (added)</span><div class="sq-bar"><button type="button" class="nw-btn" id="sq-all">Open all answers</button><span class="nw-note" style="margin:0">6 questions, one per idea in this lecture.</span></div>
+<ol class="sq-list">
+<li><span class="sq-topic">The frame</span><p class="sq-q">How are <span class="mh"><b>N</b></span> and <span class="mh"><b>B</b></span> defined, and why is <span class="mh"><b>N</b></span> automatically perpendicular to <span class="mh"><b>T</b></span>?</p><details><summary>Show the answer</summary><div class="sq-a"><p><span class="mh"><b>N</b> = <b>T</b>′/|<b>T</b>′|</span> and <span class="mh"><b>B</b> = <b>T</b> × <b>N</b></span>.</p><p><span class="mh">|<b>T</b>(<i>t</i>)| = 1</span> is constant, and a vector function of constant length is orthogonal to its derivative (differentiate <span class="mh"><b>T</b> · <b>T</b> = 1</span>). So <span class="mh"><b>T</b>′</span>, and therefore <span class="mh"><b>N</b></span>, is perpendicular to <span class="mh"><b>T</b></span>. <span class="mh"><b>N</b></span> points toward the inside of the bend.</p></div></details></li>
+<li><span class="sq-topic">Computing T, N, B</span><p class="sq-q">Find <span class="mh"><b>T</b></span>, <span class="mh"><b>N</b></span>, <span class="mh"><b>B</b></span> and <span class="mh">κ</span> for the helix <span class="mh"><b>r</b>(<i>t</i>) = ⟨cos <i>t</i>, sin <i>t</i>, <i>t</i>⟩</span>.</p><details><summary>Show the answer</summary><div class="sq-a"><p><span class="mh"><b>r</b>′ = ⟨−sin <i>t</i>, cos <i>t</i>, 1⟩</span>, <span class="mh">|<b>r</b>′| = √2</span>, so <span class="mh"><b>T</b> = (1/√2)⟨−sin <i>t</i>, cos <i>t</i>, 1⟩</span>.</p><p><span class="mh"><b>T</b>′ = (1/√2)⟨−cos <i>t</i>, −sin <i>t</i>, 0⟩</span>, <span class="mh">|<b>T</b>′| = 1/√2</span>, so <span class="mh"><b>N</b> = ⟨−cos <i>t</i>, −sin <i>t</i>, 0⟩</span> (horizontal, pointing at the z-axis).</p><p><span class="mh"><b>B</b> = <b>T</b> × <b>N</b> = (1/√2)⟨sin <i>t</i>, −cos <i>t</i>, 1⟩</span>.</p><p><span class="mh">κ = |<b>T</b>′|/|<b>r</b>′| = (1/√2)/√2 = 1/2</span>.</p></div></details></li>
+<li><span class="sq-topic">Two planes</span><p class="sq-q">For that helix at <span class="mh"><i>P</i>(0, 1, π/2)</span>, find the normal plane and the osculating plane. Which vector is the normal of each?</p><details><summary>Show the answer</summary><div class="sq-a"><p>Here <span class="mh"><i>t</i> = π/2</span>. The normal plane is perpendicular to the curve, so its normal is <span class="mh"><b>r</b>′(π/2) = ⟨−1, 0, 1⟩</span>: <span class="mh">−<i>x</i> + (<i>z</i> − π/2) = 0</span>, i.e. <span class="mh"><i>z</i> = <i>x</i> + π/2</span>.</p><p>The osculating plane contains <span class="mh"><b>T</b></span> and <span class="mh"><b>N</b></span>, so its normal is <span class="mh"><b>B</b>(π/2)</span>, parallel to <span class="mh">⟨1, 0, 1⟩</span>: <span class="mh"><i>x</i> + (<i>z</i> − π/2) = 0</span>, i.e. <span class="mh"><i>z</i> = −<i>x</i> + π/2</span>.</p></div></details></li>
+<li><span class="sq-topic">Osculating circle</span><p class="sq-q">Find the osculating circle of <span class="mh"><i>y</i> = <i>x</i>²</span> at the origin.</p><details><summary>Show the answer</summary><div class="sq-a"><p><span class="mh">κ(0) = 2</span>, so the radius is <span class="mh">1/κ = 1/2</span>. The centre is on the concave side, along <span class="mh"><b>N</b> = ⟨0, 1⟩</span>: the point <span class="mh">(0, 1/2)</span>.</p><p><span class="mh"><i>x</i>² + (<i>y</i> − 1/2)² = 1/4</span>.</p></div></details></li>
+<li><span class="sq-topic">Velocity and acceleration</span><p class="sq-q">A particle has position <span class="mh"><b>r</b>(<i>t</i>) = ⟨<i>t</i>², <i>e</i><sup><i>t</i></sup>, <i>te</i><sup><i>t</i></sup>⟩</span>. Find its velocity, acceleration and speed.</p><details><summary>Show the answer</summary><div class="sq-a"><p><span class="mh"><b>v</b> = <b>r</b>′ = ⟨2<i>t</i>, <i>e</i><sup><i>t</i></sup>, (1 + <i>t</i>)<i>e</i><sup><i>t</i></sup>⟩</span>.</p><p><span class="mh"><b>a</b> = <b>v</b>′ = ⟨2, <i>e</i><sup><i>t</i></sup>, (2 + <i>t</i>)<i>e</i><sup><i>t</i></sup>⟩</span>.</p><p>Speed <span class="mh">= |<b>v</b>| = √(4<i>t</i>² + <i>e</i><sup>2<i>t</i></sup> + (1 + <i>t</i>)²<i>e</i><sup>2<i>t</i></sup>)</span>. Speed is a scalar; velocity is a vector.</p></div></details></li>
+<li><span class="sq-topic">Back from acceleration</span><p class="sq-q">A particle starts at <span class="mh"><b>r</b>(0) = ⟨1, 0, 0⟩</span> with <span class="mh"><b>v</b>(0) = ⟨1, −1, 1⟩</span> and has <span class="mh"><b>a</b>(<i>t</i>) = ⟨4<i>t</i>, 6<i>t</i>, 1⟩</span>. Find <span class="mh"><b>r</b>(<i>t</i>)</span>.</p><details><summary>Show the answer</summary><div class="sq-a"><p>Integrate once: <span class="mh"><b>v</b>(<i>t</i>) = ⟨2<i>t</i>², 3<i>t</i>², <i>t</i>⟩ + <b>C</b></span>, and <span class="mh"><b>v</b>(0) = ⟨1, −1, 1⟩</span> gives <span class="mh"><b>v</b>(<i>t</i>) = ⟨2<i>t</i>² + 1, 3<i>t</i>² − 1, <i>t</i> + 1⟩</span>.</p><p>Integrate again: <span class="mh"><b>r</b>(<i>t</i>) = ⟨(2/3)<i>t</i>³ + <i>t</i>, <i>t</i>³ − <i>t</i>, <i>t</i>²/2 + <i>t</i>⟩ + <b>D</b></span>, and <span class="mh"><b>r</b>(0) = ⟨1, 0, 0⟩</span> gives <span class="mh"><b>r</b>(<i>t</i>) = ⟨(2/3)<i>t</i>³ + <i>t</i> + 1, <i>t</i>³ − <i>t</i>, <i>t</i>²/2 + <i>t</i>⟩</span>.</p><p>Use each initial condition as soon as you have integrated, not at the end.</p></div></details></li>
+</ol></div></section>
+<nav class="pn" aria-label="Previous and next lecture"><a class="pv" href="13.2-13.3%20Arc%20Length%20and%20Curvature.html"><small>← Previous lecture</small><b>13.2–13.3 · Integrals, Arc Length and Curvature</b></a><a class="nx" href="13.4-14.1%20Acceleration%20Components%20and%20Functions%20of%20Several%20Variables.html"><small>Next lecture →</small><b>13.4–14.1 · Acceleration Components, Functions of Several Variables</b></a></nav>
 <footer>
 Source: 13.3-13.4.pdf (OneNote tab “13.4”, Friday, October 9, 2026) · 11 pages · 24 original images, all shown above (images 2 and 3 are the same photo, split across a page break). Textbook references are to Stewart, <i>Calculus</i>, Sections 13.3 and 13.4, by item number.<br>
 If a typed line ever disagrees with a photo, trust the photo.
@@ -998,4 +1058,13 @@ lb.addEventListener('click',function(){lb.classList.remove('on');});
 document.addEventListener('keydown',function(e){if(e.key==='Escape')lb.classList.remove('on');});
 })();
 </script>
-</body></html>
+<script>
+(function(){var b=document.getElementById('sq-all');if(b)b.addEventListener('click',function(){var d=document.querySelectorAll('.sq-list details'),open=b.getAttribute('data-o')!=='1';
+  [].forEach.call(d,function(x){x.open=open;});b.setAttribute('data-o',open?'1':'0');b.textContent=open?'Close all answers':'Open all answers';});
+try{var fn=location.pathname.split('/').pop(),ti=document.querySelector('h1');if(fn&&ti)localStorage.setItem('calc3-last',JSON.stringify({h:fn,t:ti.textContent.replace(/\s+/g,' ').trim()}));}catch(e){}
+var toc=document.querySelector('.toc');if(!toc)return;var L=[].map.call(toc.querySelectorAll('a[href^="#"]'),function(a){return [a,document.getElementById(a.getAttribute('href').slice(1))];}).filter(function(x){return x[1];});
+if(!L.length)return;var cur=null,tick=false;
+function spy(){tick=false;var best=null;for(var i=0;i<L.length;i++){if(L[i][1].getBoundingClientRect().top<=140)best=L[i][0];}
+  if(best===cur)return;if(cur)cur.classList.remove('cur');cur=best;if(cur){cur.classList.add('cur');var l=cur.offsetLeft-toc.clientWidth/2+cur.offsetWidth/2;try{toc.scrollTo({left:l,behavior:'smooth'});}catch(e){toc.scrollLeft=l;}}}
+window.addEventListener('scroll',function(){if(!tick){tick=true;requestAnimationFrame(spy);}},{passive:true});spy();})();
+</script></body></html>
