@@ -80,6 +80,10 @@
         {
             "label": "14.7 Max and Min Values",
             "file": "pages/14.7 Maximum and Minimum Values.html"
+        },
+        {
+            "label": "14.7–14.8 Absolute Extrema, Lagrange",
+            "file": "pages/14.7-14.8 Absolute Extrema and Lagrange Multipliers.html"
         }
     ]
 }
