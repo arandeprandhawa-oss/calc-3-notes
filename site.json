@@ -84,6 +84,10 @@
         {
             "label": "14.7–14.8 Absolute Extrema, Lagrange",
             "file": "pages/14.7-14.8 Absolute Extrema and Lagrange Multipliers.html"
+        },
+        {
+            "label": "15.1 Double Integrals",
+            "file": "pages/15.1 Double Integrals over Rectangles.html"
         }
     ]
 }
