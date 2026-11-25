@@ -26,3 +26,4 @@
 - [14.7 Max and Min Values](https://arandeprandhawa-oss.github.io/calc-3-notes/#14-7-max-and-min-values) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/14.7%20Maximum%20and%20Minimum%20Values.html)
 - [14.7–14.8 Absolute Extrema, Lagrange](https://arandeprandhawa-oss.github.io/calc-3-notes/#14-7-14-8-absolute-extrema-lagrange) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/14.7-14.8%20Absolute%20Extrema%20and%20Lagrange%20Multipliers.html)
 - [15.1 Double Integrals](https://arandeprandhawa-oss.github.io/calc-3-notes/#15-1-double-integrals) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/15.1%20Double%20Integrals%20over%20Rectangles.html)
+- [15.2 General Regions](https://arandeprandhawa-oss.github.io/calc-3-notes/#15-2-general-regions) - [open on its own](https://arandeprandhawa-oss.github.io/calc-3-notes/pages/15.2%20Double%20Integrals%20over%20General%20Regions.html)

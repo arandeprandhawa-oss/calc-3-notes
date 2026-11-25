@@ -88,6 +88,10 @@
         {
             "label": "15.1 Double Integrals",
             "file": "pages/15.1 Double Integrals over Rectangles.html"
+        },
+        {
+            "label": "15.2 General Regions",
+            "file": "pages/15.2 Double Integrals over General Regions.html"
         }
     ]
 }
